@@ -1,0 +1,15 @@
+﻿@page
+@model WebAppSamples.Pages.AccessDeniedModel
+@{
+}
+
+<h1>⛔ ليس لديك صلاحية لزيارة هذة الصفحة</h1>
+
+<header>
+    <p class="text-danger">⛔ ليس لديك صلاحية لزيارة هذة الصفحة</p>
+</header>
+
+@if (!string.IsNullOrWhiteSpace(Model.ReturnUrl))
+{
+    <a href="@Model.ReturnUrl">حاول مرة اخرى</a>
+}
